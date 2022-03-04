@@ -1,0 +1,12 @@
+.footer {
+    grid-area: pie;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    align-items: center;
+}
+
+.footer__icono {
+    padding-top: 3px;
+}

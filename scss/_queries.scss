@@ -1,0 +1,43 @@
+/* Servicios */
+
+
+@media screen and (min-width: 375px) and (max-width: 767px) {
+    
+    .cuerpo-serv {
+        grid-template-rows: 10vh 20vh 15vh 500vh 4vh;
+    }
+    .header {
+
+        display: flex;
+        justify-content: center ;
+        align-items: center;
+        font-size: 16px;
+    }
+    
+    .nav__links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .servicios {
+        grid-template-columns: 1fr ;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+    .cuerpo-serv {
+        grid-template-rows: 10vh 10vh 15vh 300vh 4vh;
+        grid-gap: 0;
+        }
+    .servicios {
+        height: 85%;
+            grid-template-columns: 1fr 1fr ;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+        }
+    .servicios__diferentes {
+        height: 80%;
+    }
+}

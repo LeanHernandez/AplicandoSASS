@@ -1,0 +1,136 @@
+@charset "UTF-8";
+.header {
+  grid-area: titulo;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px; }
+
+.nav {
+  grid-area: barra;
+  background-color: black;
+  color: white;
+  font-size: 20px; }
+
+.nav__links {
+  display: flex;
+  justify-content: space-around; }
+
+.nav__item {
+  list-style: none; }
+
+.nav__link {
+  text-decoration: none;
+  color: white; }
+
+/* Animación Appear Header*/
+.anim-appear {
+  animation-name: appear;
+  animation-timing-function: ease;
+  animation-duration: 1.2s;
+  animation-delay: 0s; }
+
+@keyframes appear {
+  0% {
+    opacity: 0%; }
+  100% {
+    opacity: 100%; } }
+
+.footer {
+  grid-area: pie;
+  background-color: black;
+  display: flex;
+  justify-content: space-around;
+  color: white;
+  align-items: center; }
+
+.footer__icono {
+  padding-top: 3px; }
+
+/* Servicios */
+.cuerpo-serv {
+  background-image: url(../img/elefantes.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  grid-template-areas: "titulo titulo" "barra barra" "titser titser" "serv serv" "pie pie";
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 10vh 5rem 5vh 100vh 4vh; }
+
+.servicios__titulo {
+  color: white;
+  grid-area: titser;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  text-decoration: underline;
+  text-align: center; }
+
+.servicios {
+  display: grid;
+  grid-area: serv;
+  grid-gap: 0.5rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem; }
+
+.servicios__descrip {
+  border-top: 2px solid #555454;
+  border-bottom: 2px solid #555454; }
+
+.servicios__img {
+  border: 2px solid #EC87E4;
+  max-width: 100%;
+  max-height: auto; }
+
+.servicios__diferentes {
+  border: 2px solid #555454;
+  background-color: rgba(211, 251, 216, 0.637);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 20rem;
+  height: 25rem;
+  transition: transform 1s, background-color 1s; }
+
+.servicios__diferentes--scale:hover {
+  transform: scale(130%);
+  background-color: #d3fbd8; }
+
+/* Media Queries Servicios */
+/* Servicios */
+@media screen and (min-width: 375px) and (max-width: 767px) {
+  .cuerpo-serv {
+    grid-template-rows: 10vh 20vh 15vh 500vh 4vh; }
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px; }
+  .nav__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .servicios {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; } }
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .cuerpo-serv {
+    grid-template-rows: 10vh 10vh 15vh 300vh 4vh;
+    grid-gap: 0; }
+  .servicios {
+    height: 85%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr; }
+  .servicios__diferentes {
+    height: 80%; } }
