@@ -1,28 +1,30 @@
 @charset "UTF-8";
+/* Mixin */
 .header {
-  grid-area: titulo;
   background-color: black;
   color: white;
+  grid-area: titulo;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 25px; }
 
 .nav {
-  grid-area: barra;
   background-color: black;
   color: white;
+  grid-area: barra;
   font-size: 20px; }
 
 .nav__links {
   display: flex;
   justify-content: space-around; }
 
-.nav__item {
-  list-style: none; }
+.nav__item, .nav__link {
+  list-style: none;
+  text-decoration: none; }
 
+/*extend*/
 .nav__link {
-  text-decoration: none;
   color: white; }
 
 /* Animación Appear Header*/
@@ -90,9 +92,18 @@
   max-width: 100%;
   max-height: auto; }
 
+/* MAP */
+.bg--anteriores {
+  background-color: #55acee; }
+
+.bg--nuevos {
+  background-color: #3a5795; }
+
+.bg--obsoletos {
+  background-color: #C25E30; }
+
 .servicios__diferentes {
   border: 2px solid #555454;
-  background-color: rgba(211, 251, 216, 0.637);
   display: flex;
   flex-direction: column;
   text-align: center;

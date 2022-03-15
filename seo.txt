@@ -1,0 +1,1 @@
+En todas las páginas, agregué las keywords necesarias, les dí una descripción a cada una basada en su contenido, y los h1 los dejé como ya los tenía, ya que supuse que el título de la página como h1 sería idóneo

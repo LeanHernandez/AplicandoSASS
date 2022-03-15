@@ -1,7 +1,13 @@
+
+/* Mixin */
+@mixin colorcitos($background-color, $color) {
+    background-color:$background-color;
+    color: $color;
+}
+
 .header {
+    @include colorcitos(black, white);
     grid-area: titulo;
-    background-color: black;
-    color: white;
     display: flex;
     justify-content: center ;
     align-items: center;
@@ -9,9 +15,8 @@
 }
 
 .nav {
+    @include colorcitos(black, white);
     grid-area: barra;
-    background-color: black;
-    color: white;
     font-size: 20px;
 }
 
@@ -22,10 +27,11 @@
 
 .nav__item {
     list-style: none;
-}
-
-.nav__link {
     text-decoration: none;
+}
+/*extend*/
+.nav__link {
+@extend .nav__item;
     color: white;
 }
 
